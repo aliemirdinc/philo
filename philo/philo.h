@@ -6,7 +6,7 @@
 /*   By: aldinc <aldinc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 13:33:15 by aldinc            #+#    #+#             */
-/*   Updated: 2025/02/11 16:31:46 by aldinc           ###   ########.fr       */
+/*   Updated: 2025/02/17 09:40:23 by aldinc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,36 +49,25 @@ typedef struct s_program
 	t_philo			*philos;
 }					t_program;
 
-// Main functions
 int					check_arg_content(char *arg);
 int					check_valid_args(char **argv);
 void				destory_all(char *str, t_program *program,
 						pthread_mutex_t *forks);
-
-// Initialization
 void				init_program(t_program *program, t_philo *philos);
 void				init_forks(pthread_mutex_t *forks, int philo_num);
 void				init_philos(t_philo *philos, t_program *program,
 						pthread_mutex_t *forks, char **argv);
 void				init_input(t_philo *philo, char **argv);
-
-// Threads
 int					thread_create(t_program *program, pthread_mutex_t *forks);
 void				*monitor(void *pointer);
 void				*philo_routine(void *pointer);
-
-// Actions
 void				eat(t_philo *philo);
 void				dream(t_philo *philo);
 void				think(t_philo *philo);
-
-// Monitor utils
 int					dead_loop(t_philo *philo);
 int					check_if_all_ate(t_philo *philos);
 int					check_if_dead(t_philo *philos);
 int					philosopher_dead(t_philo *philo, size_t time_to_die);
-
-// Utils
 int					ft_atol(char *str);
 void				ft_usleep(size_t microseconds);
 int					ft_strlen(char *str);

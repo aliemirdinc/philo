@@ -6,28 +6,22 @@
 /*   By: aldinc <aldinc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 13:33:18 by aldinc            #+#    #+#             */
-/*   Updated: 2025/02/09 17:40:48 by aldinc           ###   ########.fr       */
+/*   Updated: 2025/02/20 08:33:52 by aldinc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Think routine funtion
 
 void	think(t_philo *philo)
 {
 	ft_printf(philo, "is thinking");
 }
 
-// Dream routine funtion
-
 void	dream(t_philo *philo)
 {
 	ft_printf(philo, "is sleeping");
 	ft_usleep(philo->time_to_sleep);
 }
-
-// Eat routine funtion
 
 void	eat(t_philo *philo)
 {

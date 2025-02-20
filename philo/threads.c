@@ -6,13 +6,11 @@
 /*   By: aldinc <aldinc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 13:33:25 by aldinc            #+#    #+#             */
-/*   Updated: 2025/02/09 13:33:27 by aldinc           ###   ########.fr       */
+/*   Updated: 2025/02/20 08:34:06 by aldinc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Checks if the value of dead_flag changed
 
 int	dead_loop(t_philo *philo)
 {
@@ -22,8 +20,6 @@ int	dead_loop(t_philo *philo)
 	pthread_mutex_unlock(philo->dead_lock);
 	return (0);
 }
-
-// Thread routine
 
 void	*philo_routine(void *pointer)
 {
@@ -40,8 +36,6 @@ void	*philo_routine(void *pointer)
 	}
 	return (pointer);
 }
-
-// Creates all the threads
 
 int	thread_create(t_program *program, pthread_mutex_t *forks)
 {

@@ -6,13 +6,11 @@
 /*   By: aldinc <aldinc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 13:32:54 by aldinc            #+#    #+#             */
-/*   Updated: 2025/02/11 16:31:51 by aldinc           ###   ########.fr       */
+/*   Updated: 2025/02/20 08:34:42 by aldinc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Initializing the input from user
 
 void	init_input(t_philo *philo, char **argv)
 {
@@ -24,8 +22,6 @@ void	init_input(t_philo *philo, char **argv)
 	if (argv[5])
 		philo->num_times_to_eat = ft_atol(argv[5]);
 }
-
-// Initializing the philosophers
 
 void	init_philos(t_philo *philos, t_program *program, pthread_mutex_t *forks,
 		char **argv)
@@ -54,8 +50,6 @@ void	init_philos(t_philo *philos, t_program *program, pthread_mutex_t *forks,
 	}
 }
 
-// Initializing the forks mutexes
-
 void	init_forks(pthread_mutex_t *forks, int philo_num)
 {
 	int	i;
@@ -67,8 +61,6 @@ void	init_forks(pthread_mutex_t *forks, int philo_num)
 		i++;
 	}
 }
-
-// Initializing the program structure
 
 void	init_program(t_program *program, t_philo *philos)
 {

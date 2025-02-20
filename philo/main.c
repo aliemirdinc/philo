@@ -6,13 +6,11 @@
 /*   By: aldinc <aldinc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 13:33:00 by aldinc            #+#    #+#             */
-/*   Updated: 2025/02/11 16:27:25 by aldinc           ###   ########.fr       */
+/*   Updated: 2025/02/20 08:33:19 by aldinc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Checks that the input is only numbers
 
 int	check_arg_content(char *arg)
 {
@@ -27,8 +25,6 @@ int	check_arg_content(char *arg)
 	}
 	return (0);
 }
-
-// Checks if the program input is correct
 
 int	check_valid_args(char **argv)
 {
@@ -45,7 +41,6 @@ int	check_valid_args(char **argv)
 		return (printf("Invalid number of times per eat\n"), 1);
 	return (0);
 }
-// Main function
 
 int	main(int argc, char **argv)
 {

@@ -36,7 +36,7 @@ int main(void)
 			printf("Müşteri %d mekana intikal etti\n", i+1);
 			sem_wait(sem);
 			printf("Müşteri %d masaya oturdu ve yemek yiyor\n", i+1);
-			sleep(2);
+			sleep(5);
 			printf("Müşteri %d yemeğini yedi şimdi gidiyor\n", i+1);
 			sem_post(sem);
 			exit(0);

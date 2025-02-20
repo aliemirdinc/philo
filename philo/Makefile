@@ -14,6 +14,8 @@ $(NAME): $(OBJ)
 clean:
 	@rm -f $(OBJ)
 
+go: all clean
+
 fclean: clean
 	@rm -f $(NAME)
 
